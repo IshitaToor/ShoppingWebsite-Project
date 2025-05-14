@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - COMETICA</title>
+  
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>
+      We'd love to hear from you. Whether you have a question about our products,
+      need assistance with an order, or want to collaborate, our team is ready to help.
+    </p>
+
+    <div class="contact-cards">
+      <div class="card">
+        <div class="icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+        <h3>Visit Us</h3>
+        <p>
+          123 Fashion Street<br>
+          Design District<br>
+          New Delhi, 110058
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>
+        <h3>Call Us</h3>
+        <p>
+          Customer Support:<br>
+          +91 7869568948<br>
+          Mon–Fri, 9am–6pm 
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+        <h3>Email Us</h3>
+        <p>
+          Customer Support:<br>
+          <a href="mailto:support@cometica.com">support@cometica.com</a><br>
+          Business Inquiries:<br>
+          <a href="mailto:info@cometica.com">info@cometica.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="message-find-container">
+      <div class="message-form">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="find-us">
+        <h3>Find Us</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1751.041757141534!2d77.08847245!3d28.627259000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04bb71328ee7%3A0x61d37d65ad545d84!2sBlock%20B1A%2C%20Janakpuri%2C%20Delhi%2C%20110058!5e0!3m2!1sen!2sin!4v1747253020879!5m2!1sen!2sin"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Google Maps location of COMETICA store">
+          </iframe>
+        </div>
+        <p>
+          Our flagship store is located in the heart of the Design District in New Delhi.
+          We're open Monday through Saturday from 9am–6pm, and Sundays from 12pm to 5pm.
+        </p>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      const payload = {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+      };
+  
+      try {
+        const response = await fetch('http://127.0.0.1:5000/api/contactus/message', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+  
+        if (response.ok) {
+          alert("Thanks for contacting us! We'll get back to you soon.");
+          this.reset();
+        } else {
+          const errorData = await response.json();
+          alert(`Error: ${errorData.error || 'Something went wrong'}`);
+        }
+      } catch (error) {
+        console.error('Error submitting the form:', error);
+        alert('An error occurred while submitting the form. Please try again later.');
+      }
+    });
+  </script>
+
+<script src="navbar.js"></script>  
+<script src="footer.js"></script>  
+  
+</body>
+</html>

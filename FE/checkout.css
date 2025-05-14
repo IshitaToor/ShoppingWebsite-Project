@@ -1,0 +1,128 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .checkout-cart-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .checkout-cart-items {
+    flex: 3;
+  }
+  
+  .checkout-cart-summary {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    height: max-content;
+  }
+  
+  .checkout-cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+  }
+  
+  .checkout-cart-image {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .checkout-cart-details {
+    flex: 1;
+  }
+  
+  .checkout-cart-quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkout-cart-quantity button {
+    padding: 5px 10px;
+  }
+  
+  .checkout-cart-quantity input {
+    width: 40px;
+    text-align: center;
+    margin: 0 5px;
+  }
+  
+  .checkout-cart-price {
+    text-align: right;
+  }
+  
+  .checkout-cart-button {
+    display: block;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  .thank-you-button {
+    display: block;
+    background: black;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .checkout-page {
+    display: flex;
+    padding: 40px;
+  }
+  
+  .checkout-form {
+    flex: 2;
+    margin-right: 40px;
+  }
+  
+  .checkout-form input, select {
+    width: -webkit-fill-available;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .summary-product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .checkout-thankyou {
+    padding: 60px;
+    text-align: center;
+  }
+  
+  .thankyou-content {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .order-info {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  

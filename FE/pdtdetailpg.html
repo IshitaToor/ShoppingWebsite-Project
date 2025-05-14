@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .detail-container {
+      display: flex;
+      gap: 3rem;
+      padding: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .detail-image {
+      flex: 1 1 40%;
+      max-width: 400px;
+    }
+
+    .detail-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .detail-info {
+      flex: 1 1 50%;
+    }
+
+    .detail-info h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+
+    .sizes button {
+      margin: 0.2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .quantity-control button {
+      width: 30px;
+      height: 30px;
+    }
+
+    .add-to-cart-btn {
+      background: black;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .size-btn.active {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+  }
+
+  .sizes button {
+    margin: 0.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-image">
+      <img id="product-image" src="" alt="Product" />
+    </div>
+    <div class="detail-info">
+      <h2 id="product-name">Product Name</h2>
+      <div class="price" id="product-price">INR 0</div>
+      <p id="product-description">Description...</p>
+
+      <h3>Size</h3>
+      <div class="sizes">
+        <button class="size-btn">XS</button>
+        <button class="size-btn">S</button>
+        <button class="size-btn">M</button>
+        <button class="size-btn">L</button>
+        <button class="size-btn">XL</button>
+      </div>
+
+      <h3>Quantity</h3>
+      <div class="quantity-control">
+        <button id="decrease">-</button>
+        <span id="quantity">1</span>
+        <button id="increase">+</button>
+      </div>
+
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+  <script src="product-detail.js"></script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>  
+
+</body>
+</html>

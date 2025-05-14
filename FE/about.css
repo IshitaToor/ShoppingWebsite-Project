@@ -1,0 +1,244 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #111;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+  
+  
+  
+  /* About Section */
+  .about-section {
+    max-width: 1200px;
+    margin: 40px 20px ;
+  }
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px; /* <-- Added gap between text and image */
+  }
+  .about-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  .about-text h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .about-text p {
+    margin-bottom: 16px;
+    color: #444;
+    font-size: 1rem;
+  }
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Values Section */
+  .values-section {
+    margin-top: 60px;
+  }
+  .values-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .values-section p {
+    color: #555;
+  }
+  
+  /* Join Section */
+  .join-section {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Georgia', serif;
+  }
+  .join-section .content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .join-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .join-section p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 12px 24px;
+    font-weight: bold;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  .btn.black {
+    background-color: #000;
+    color: #fff;
+  }
+  .btn:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .team-members {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+  }
+  
+  h2 {
+    font-size: 2em;
+    padding: 20px;
+    font-weight: bold;
+  }
+  
+  .values, .team {
+    padding: 20px;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+  }
+  
+  .card h3 {
+    font-weight: bold;
+  }
+  
+  .card p {
+    color: #555;
+  }
+  
+  .team-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .team-member {
+    max-width: 250px;
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .team-member h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .team-member p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .join-section {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .join-section .content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .join-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .join-section p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-weight: bold;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.black {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+    color: #fff;
+  }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="light"> 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Fashion Store</title>
+        <link rel="stylesheet" href="styles.css"/>
+      </head>
+      <body>
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Fashion model" class="hero-image">
+          <div class="hero-content">
+            <h1>Timeless Elegance</h1>
+            <p>Discover our new collection of carefully crafted pieces for the modern individual.</p>
+            <a href="shop.html" class="btn">Shop Now</a>
+          </div>
+        </section>
+      
+        <!-- Featured Products Section -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Featured Products</h2>
+            <p>Our most popular items, handpicked for you.</p>
+          </div>
+          <div id="featured-products" class="product-grid">
+            <!-- Products will be dynamically loaded here -->
+          </div>
+          <div class="section-footer">
+            <a href="shop.html" class="btn-outline">View All Products</a>
+          </div>
+        </section>
+
+        <!-- Collections Section -->
+        <section class="section collections" id="collections-container-section">
+          <div class="section-header">
+            <h2>Our Collections</h2>
+            <p>Explore our carefully curated collections.</p>
+          </div>
+          <div id="collections-container" class="collections-container">
+            <!-- Collections will be dynamically loaded here -->
+          </div>
+        </section>    
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <h2 class="newsletter-title">Stay Updated</h2>
+            <p class="newsletter-description">
+              Subscribe to our newsletter to receive updates on new collections and exclusive offers.
+            </p>
+            <div class="newsletter">
+              <input type="email" placeholder="Your email address" id="newsletter-email-index" />
+              <button onclick="subscribeNewsletter('newsletter-email-index')">Subscribe</button>
+            </div>
+          </section>
+      
+        <script src="navbar.js"></script>  
+        <script src="footer.js"></script>  
+        <script src="featured-products.js"></script>
+        <script src="collections.js"></script>
+      </body>
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden"></div>  
+</html>

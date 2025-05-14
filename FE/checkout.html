@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="checkout-page">
+    <section class="checkout-form">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <h3>Shipping Information</h3>
+        <div class="form-row">
+          <input type="text" placeholder="First Name" id="first-name" required>
+          <input type="text" placeholder="Last Name" id="last-name" required>
+        </div>
+        <input type="email" placeholder="Email" id="email" required>
+        <input type="text" placeholder="Address" id="address" required>
+        <div class="form-row">
+          <input type="text" placeholder="City" id="city" required>
+          <input type="text" placeholder="State" id="state" required>
+          <input type="text" placeholder="ZIP Code" id="zip-code" required>
+        </div>
+        <select disabled required id="country">
+          <option value="ind">India</option>
+        </select>
+
+        <h3>Payment Information</h3>
+        <input type="text" placeholder="Name on Card" id="card-name" required>
+        <input type="text" placeholder="Card Number" id="card-number" required>
+        <div class="form-row">
+          <input type="text" placeholder="MM/YY" id="expiry-date" required>
+          <input type="text" placeholder="CVV" id="cvv" required>
+        </div>
+        <button type="submit" class="checkout-cart-button full" id="checkout-cart">Pay INR 0 and Place your order</button>
+      </form>
+    </section>
+
+    <aside class="checkout-cart-summary">
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="summary-details">
+            <p class="summary-details-para">Total Items: <span id="total-items">0</span></p>
+            <p class="summary-details-para">Subtotal: <span id="sub-total-amount">0</span></p>
+            <p class="summary-details-para">Shipping: <span id="shipping-amount">0</span></p>
+        </div>
+        <p class="summary-details-para">Total Amount: <span id="total-amount">0</span></p>
+      </div>
+    </aside>
+  </main>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+  <script src="checkout.js"></script>
+
+</body>
+</html>

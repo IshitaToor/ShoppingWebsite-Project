@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Products</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+      
+  <div class="container">
+    <h1 class="title">Shop All Products</h1>
+    <div class="shop-page">
+      <!-- Sidebar Filters -->
+      <aside class="sidebar">
+        <h2>Filters</h2>
+
+        <div class="filter-group">
+          <h3>Categories</h3>
+          <label><input type="checkbox" class="category-filter" value="Tops"> Tops</label>
+          <label><input type="checkbox" class="category-filter" value="Bottoms"> Bottoms</label>
+          <label><input type="checkbox" class="category-filter" value="Shoes"> Shoes</label>
+          <label><input type="checkbox" class="category-filter" value="Accessories"> Accessories</label>
+          <label><input type="checkbox" class="category-filter" value="Formal"> Formal</label>
+          <label><input type="checkbox" class="category-filter" value="Hoodies"> Hoodies</label>
+          <label><input type="checkbox" class="category-filter" value="Outwear"> Outwear</label>
+         </div>
+
+        <hr />
+
+      </aside>
+
+      <!-- Product Section -->
+      <main class="product-area">
+        <div class="top-bar">
+          <span id="product-count">products</span>
+          <select id="sort-select">
+            <option value="default">Sort by: Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A to Z</option>
+          </select>
+        </div>
+        <div id="product-grid" class="product-grid">
+          <!-- Products appear here -->
+        </div>
+      </main>
+    </div>
+  </div>  
+  <script src="navbar.js"></script>
+  <script src="shoppdts.js"></script>
+  <script src="footer.js"></script>  
+</body>
+</html>
